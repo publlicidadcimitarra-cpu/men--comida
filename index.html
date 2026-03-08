@@ -13,84 +13,65 @@
 body{
 margin:0;
 font-family:Arial;
-background:#000;
-overflow-x:hidden;
-}
-.portada{
-text-align:center;
-color:white;
+background:black;
+overflow:hidden;
 }
 
-.bienvenida{
-font-size:28px;
-margin-top:10px;
-letter-spacing:2px;
-}
-
-/* MENU */
+/* MENU FIJO */
 
 .menu{
 position:fixed;
 top:0;
 width:100%;
-background:#000;
+background:black;
 display:flex;
-overflow-x:auto;
+justify-content:center;
+gap:10px;
 padding:10px;
-gap:8px;
 z-index:1000;
 }
 
 .menu a{
 background:#FFD400;
-color:#000;
+color:black;
 text-decoration:none;
-padding:10px 14px;
+padding:10px 15px;
 border-radius:8px;
-font-size:14px;
 font-weight:bold;
-white-space:nowrap;
 }
 
-/* SLIDER */
+/* CONTENEDOR DE PAGINAS */
 
 .slider{
-
-margin-top:70px;
 display:flex;
+height:100vh;
 overflow-x:auto;
 scroll-snap-type:x mandatory;
 scroll-behavior:smooth;
-
 }
+
+/* CADA PAGINA */
 
 .pagina{
-
 flex:0 0 100%;
 scroll-snap-align:start;
-
-}
-
-.pagina img{
-
-width:100%;
-height:auto;
-display:block;
-
-}
-/* PORTADA */
-
-.portada{
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 }
+
+/* IMAGENES */
+
+.pagina img{
+max-width:100%;
+max-height:80vh;
+}
+
+/* LOGO CENTRADO */
 
 .logo{
 width:200px;
 }
-
 
 </style>
 

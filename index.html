@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menú</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#000;
+overflow-x:hidden;
+}
+
+/* MENU */
+
+.menu{
+position:fixed;
+top:0;
+width:100%;
+background:#000;
+display:flex;
+overflow-x:auto;
+padding:10px;
+gap:8px;
+z-index:1000;
+}
+
+.menu a{
+background:#FFD400;
+color:#000;
+text-decoration:none;
+padding:10px 14px;
+border-radius:8px;
+font-size:14px;
+font-weight:bold;
+white-space:nowrap;
+}
+
+/* SLIDER */
+
+.slider{
+
+margin-top:70px;
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+
+}
+
+.pagina{
+
+flex:0 0 100%;
+scroll-snap-align:start;
+
+}
+
+.pagina img{
+
+width:100%;
+height:auto;
+display:block;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- MENU CON ICONOS -->
+
+<div class="menu">
+
+<a href="#p1"> Micheladas</a>
+
+<a href="#p4"> Granizados</a>
+
+<a href="#p12"> antojos</a>
+
+<a href="#p15"> comidas</a>
+
+<a href="#p18"> hamburguesas</a>
+
+<a href="#p26"> picadas</a>
+
+</div>
+
+
+
+<!-- SLIDER DE IMAGENES -->
+
+<div class="slider">
+
+<div class="pagina">
+<img src="logo.png">
+</div>
+
+<div id="p1" class="pagina"><img src="1.jpg"></div>
+<div class="pagina"><img src="2.jpg"></div>
+<div class="pagina"><img src="3.jpg"></div>
+<div class="pagina"><img src="4.jpg"></div>
+
+<div id="p4" class="pagina"><img src="4.jpg"></div>
+<div class="pagina"><img src="6.jpg"></div>
+<div class="pagina"><img src="7.jpg"></div>
+
+<div id="p12" class="pagina"><img src="12.jpg"></div>
+<div class="pagina"><img src="9.jpg"></div>
+<div class="pagina"><img src="10.jpg"></div>
+<div class="pagina"><img src="11.jpg"></div>
+
+<div id="p15" class="pagina"><img src="15.jpg"></div>
+<div class="pagina"><img src="13.jpg"></div>
+<div class="pagina"><img src="14.jpg"></div>
+<div class="pagina"><img src="15.jpg"></div>
+
+<div id="p18" class="pagina"><img src="18.jpg"></div>
+<div class="pagina"><img src="17.jpg"></div>
+<div class="pagina"><img src="18.jpg"></div>
+<div class="pagina"><img src="19.jpg"></div>
+
+<div id="p26" class="pagina"><img src="26.jpg"></div>
+<div class="pagina"><img src="21.jpg"></div>
+<div class="pagina"><img src="22.jpg"></div>
+<div class="pagina"><img src="23.jpg"></div>
+<div class="pagina"><img src="24.jpg"></div>
+<div class="pagina"><img src="25.jpg"></div>
+<div class="pagina"><img src="26.jpg"></div>
+<div class="pagina"><img src="27.jpg"></div>
+
+</div>
+
+</body>
+</html>

@@ -14,46 +14,51 @@ body{
 margin:0;
 font-family:Arial;
 background:black;
-overflow:hidden;
+overflow:hidden; /* bloquea scroll vertical */
 }
 
-/* MENU FIJO */
+/* MENU FLOTANTE */
 
 .menu{
 position:fixed;
-top:0;
-width:100%;
-background:black;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(5px);
 display:flex;
-justify-content:center;
 gap:10px;
-padding:10px;
-z-index:1000;
+padding:10px 15px;
+border-radius:20px;
+z-index:999;
 }
 
 .menu a{
 background:#FFD400;
 color:black;
 text-decoration:none;
-padding:10px 15px;
+padding:8px 14px;
 border-radius:8px;
 font-weight:bold;
+font-size:14px;
 }
 
-/* CONTENEDOR DE PAGINAS */
+/* CONTENEDOR */
 
 .slider{
 display:flex;
 height:100vh;
 overflow-x:auto;
+overflow-y:hidden;
 scroll-snap-type:x mandatory;
 scroll-behavior:smooth;
 }
 
-/* CADA PAGINA */
+/* PAGINAS */
 
 .pagina{
 flex:0 0 100%;
+height:100vh;
 scroll-snap-align:start;
 display:flex;
 justify-content:center;
@@ -64,13 +69,14 @@ align-items:center;
 
 .pagina img{
 max-width:100%;
-max-height:80vh;
+max-height:85vh;
+object-fit:contain;
 }
 
-/* LOGO CENTRADO */
+/* LOGO */
 
 .logo{
-width:200px;
+width:220px;
 }
 
 </style>
@@ -80,36 +86,26 @@ width:200px;
 <body>
 
 
-<!-- MENU CON ICONOS -->
+<!-- MENU -->
 
 <div class="menu">
 
 <a href="#p1">Micheladas</a>
-
 <a href="#p4">Granizados</a>
-
 <a href="#p12">Antojos</a>
-
 <a href="#p15">Comidas</a>
-
 <a href="#p18">Hamburguesas</a>
-
 <a href="#p26">Picadas</a>
-<a></a>
+
 </div>
 
 
-
-<!-- SLIDER DE IMAGENES -->
+<!-- SLIDER -->
 
 <div class="slider">
 
-<div class="pagina portada">
-    <img src="logo.png" class="logo">
-</div>
-
-
-
+<div class="pagina">
+<img src="logo.png" class="logo">
 </div>
 
 <div id="p1" class="pagina"><img src="1.jpg"></div>
@@ -120,6 +116,7 @@ width:200px;
 <div class="pagina"><img src="5.jpg"></div>
 <div class="pagina"><img src="6.jpg"></div>
 <div class="pagina"><img src="7.jpg"></div>
+<div class="pagina"><img src="8.jpg"></div>
 <div class="pagina"><img src="9.jpg"></div>
 <div class="pagina"><img src="10.jpg"></div>
 <div class="pagina"><img src="11.jpg"></div>
